@@ -11,6 +11,12 @@
       ]
     }
   },
+   "proxy": {
+    "/testAddr": {
+      "target": "http://172.20.32.41:7009/",
+      "changeOrigin":true
+    }
+  },
   "browserslist": [
     ">1%",
     "last 4 versions",

@@ -25,7 +25,7 @@ function checkStatus(response) {
 export default function request(sUrl, options, type) {
   let url;
   if(type == "test") {
-     url = Config.testApi + sUrl;
+     url = sUrl;
   } else {
      url = Config.api + sUrl;
   }
