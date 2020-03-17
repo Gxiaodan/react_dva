@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
-import { Input, DatePicker } from 'antd';
+import { Input, DatePicker, Button } from 'antd';
 import 'antd/dist/antd.css'; 
+import Store from 'store';
 
 @connect(state => ({
-  chart: state.chart,
+  login: state.login,
 }))
 export default class Analysis extends Component {
   state = {}
@@ -13,6 +14,13 @@ export default class Analysis extends Component {
 
   componentWillUnmount() {
   }
+  testFun = ()=>{
+    this.props.dispatch({
+      type: `login/test`,
+      payload: {},
+    });
+    // console.log("===============")
+  }
 
   render() {
     return (
@@ -20,6 +28,7 @@ export default class Analysis extends Component {
       分析页
       <DatePicker />
       <Input />
+      <Button onClick={this.testFun}>testFun</Button>
       </div>
     );
   }

@@ -14,7 +14,10 @@
    "proxy": {
     "/testAddr": {
       "target": "http://172.20.32.41:7009/",
-      "changeOrigin":true
+      "changeOrigin":true,
+      "pathRewrite": {
+                    "^/testAddr": ""
+                }
     }
   },
   "browserslist": [

@@ -17,7 +17,8 @@ export async function signOut() {
 }
 
 // http://172.20.32.41:7009/screen/findScreen/1
+// "pathRewrite": { "^/testAddr": "" }
 
 export async function test(params) {
-  return request('testAddr/screen/findScreen/1', {}, "test");
+  return request('/testAddr/screen/findScreen/1', {}, "test");
 }
